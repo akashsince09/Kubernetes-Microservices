@@ -82,7 +82,7 @@ spec:
         tier: mysql
     spec:
       containers:
-      - image: mysql:5.7
+      - image: mysql
         name: mysql
         env:
         - name: MYSQL_RANDOM_ROOT_PASSWORD
@@ -216,7 +216,7 @@ spec:
       # - copy directory structure to persistent volume
       initContainers:
        - name: artisan
-         image: <myapp>
+         image: bitnami/laravel
          args:
            - /bin/bash
            - -c
@@ -229,7 +229,7 @@ spec:
              mountPath: /mnt
       containers:
        - name: web
-         image: <myapp>
+         image: bitnami/laravel
          envFrom:
           - configMapRef:
              name: myapp-laravel
