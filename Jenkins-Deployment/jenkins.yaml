@@ -24,4 +24,5 @@ spec:
           - name: jenkins-vol
             mountPath: /var/jenkins_vol
       volumes:
-        - name: jenkins
+        - name: jenkins-vol
+          emptyDir: {}
