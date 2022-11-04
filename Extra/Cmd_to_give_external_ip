@@ -1,0 +1,5 @@
+ kubectl patch svc ___name___ -p '{"spec":{"externalIPs":["___ip___"]}}'
+ 
+ 
+ 
+ 
